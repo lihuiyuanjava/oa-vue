@@ -96,9 +96,8 @@ export const constantRoutes = [{
     },
   ]*!/
   },*/
-
   //测试页面
-  {
+  /*{
     path: '/',
     component: Layout,
     children: [{
@@ -109,16 +108,102 @@ export const constantRoutes = [{
         title: '测试',
       }
     }]
+  },*/
+    {
+    // path: '/X.commodity/listCommodity',
+    path: '/',
+    component: Layout,
+    children: [{
+      path: 'listCommodity',
+      name: 'listCommodity',
+      component: () => import('@/views/X.commodity/listCommodity'),
+      meta: {
+        title: '商品管理',
+      }
+    }]
   },
   {
-    path: '/listOrder',
+    path: '/Z.invoice/listInvoice',
+    component: Layout,
+    children: [{
+      path: 'listInvoice',
+      name: 'listInvoice',
+      component: () => import('@/views/Z.invoice/listInvoice'),
+      meta: {
+        title: '发票管理',
+      }
+    }]
+  },
+  {
+    path: '/Z.inventory/listInventory',
+    component: Layout,
+    children: [{
+      path: 'listInventory',
+      name: 'listInventory',
+      component: () => import('@/views/Z.inventory/listInventory'),
+      meta: {
+        title: '库存管理',
+      }
+    }]
+  },
+  {
+    path: '/Z.supplier/listSupplier',
+    component: Layout,
+    children: [{
+      path: 'listSupplier',
+      name: 'listSupplier',
+      component: () => import('@/views/Z.supplier/listSupplier'),
+      meta: {
+        title: '供应商管理',
+      }
+    }]
+  },
+
+  {
+    path: '/L.order/listOrder',
     component: Layout,
     children: [{
       path: 'listOrder',
       name: 'listOrder',
-      component: () => import('@/views/listOrder'),
+      component: () => import('@/views/L.order/listOrder'),
       meta: {
         title: '订单管理',
+      }
+    }]
+  },
+  {
+    path: '/X.purchase/listPurchase',
+    component: Layout,
+    children: [{
+      path: 'listPurchase',
+      name: 'listPurchase',
+      component: () => import('@/views/X.purchase/listPurchase'),
+      meta: {
+        title: '采购管理',
+      }
+    }]
+  },
+  {
+    path: '/X.salesman/listSalesman',
+    component: Layout,
+    children: [{
+      path: 'listSalesman',
+      name: 'listSalesman',
+      component: () => import('@/views/X.salesman/listSalesman'),
+      meta: {
+        title: '业务员管理',
+      }
+    }]
+  },
+  {
+    path: '/L.refund/listRefund',
+    component: Layout,
+    children: [{
+      path: 'listRefund',
+      name: 'listRefund',
+      component: () => import('@/views/L.refund/listRefund'),
+      meta: {
+        title: '业务员管理',
       }
     }]
   },
